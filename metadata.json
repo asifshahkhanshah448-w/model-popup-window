@@ -1,0 +1,6 @@
+{
+  "name": "Modal Popup Window",
+  "description": "Internship Project 3: A professional, responsive, accessible modal popup with smooth CSS animations, form validation, and keyboard support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

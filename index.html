@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal / Popup Window | Internship Project 3</title>
+    <meta
+      name="description"
+      content="A modern, fully responsive, and accessible Modal/Popup window project built with pure HTML5, CSS3, and JavaScript featuring smooth animations and client-side form validation."
+    />
+    <meta property="og:title" content="Modal / Popup Window | Internship Project 3" />
+    <meta
+      property="og:description"
+      content="Production-ready Modal Window with smooth CSS animations, backdrop overlay, escape key handling, focus trapping, and form validation."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- External Google Font for Refined Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Site Top Bar Navigation -->
+    <header class="site-header">
+      <div class="header-container">
+        <a href="#" class="brand-wrapper" aria-label="Internship Project 3 Home">
+          <div class="brand-icon" aria-hidden="true">M</div>
+          <span class="brand-text">ModalStudio</span>
+        </a>
+        <span class="header-badge">Internship Project 3</span>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Hero Presentation Section -->
+      <section class="hero-section">
+        <div class="hero-tag">
+          <span>Frontend Engineering</span>
+          <span class="hero-tag-bullet">·</span>
+          <span>Assignment 03</span>
+        </div>
+
+        <h1 class="hero-title">
+          Interactive <span class="highlight">Modal / Popup</span> System
+        </h1>
+
+        <p class="hero-description">
+          A lightweight, fully responsive, and accessible modal dialog built with clean HTML5,
+          CSS3 animations, and vanilla JavaScript. Features animated backdrop blur, keyboard
+          escape handling, focus trapping, outside-click dismissal, and client-side form validation.
+        </p>
+
+        <!-- Prominent Open Modal Call-to-Actions -->
+        <div class="cta-group">
+          <button id="openModalBtn" class="btn btn-primary" type="button" aria-haspopup="dialog">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M15 3h6v6"></path>
+              <path d="M10 14L21 3"></path>
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            </svg>
+            <span>Open Contact Modal</span>
+          </button>
+
+          <button id="openQuickModalBtn" class="btn btn-secondary" type="button" aria-haspopup="dialog">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+            <span>Quick Confirm Modal</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Architecture & Feature Highlights Grid -->
+      <section class="features-grid" aria-label="Key Modal Architecture Features">
+        <div class="feature-card">
+          <div class="feature-icon-wrapper" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              <path d="M10 4v4"></path>
+              <path d="M2 8h20"></path>
+              <path d="M6 4v4"></path>
+            </svg>
+          </div>
+          <h2 class="feature-title">Smooth CSS Animations</h2>
+          <p class="feature-text">
+            Composited 60fps scale-in and fade-out keyframes with cubic-bezier timing. Fully respects <code>prefers-reduced-motion</code>.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h2 class="feature-title">Accessibility & A11y</h2>
+          <p class="feature-text">
+            WAI-ARIA <code>role="dialog"</code>, automatic focus capture, Tab keyboard trapping, and focus restoration to the trigger button upon closing.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </div>
+          <h2 class="feature-title">3 Dismissal Methods</h2>
+          <p class="feature-text">
+            Dismiss effortlessly via the top-right X button, pressing the physical <span class="kbd-shortcut">Esc</span> key, or clicking the frosted dark backdrop.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+          </div>
+          <h2 class="feature-title">In-Modal Validation</h2>
+          <p class="feature-text">
+            Clean client-side validation with dynamic error states and an inline success confirmation view without page reloads.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================================================================
+         PRIMARY MODAL: Contact & Feedback Form Modal
+         ========================================================================= -->
+    <div id="modalOverlay" class="modal-overlay" aria-hidden="true">
+      <div
+        id="modalContainer"
+        class="modal-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+        aria-describedby="modalSubtitle"
+      >
+        <!-- Modal Header -->
+        <header class="modal-header">
+          <div class="modal-header-content">
+            <h2 id="modalTitle" class="modal-title">Get in Touch</h2>
+            <p id="modalSubtitle" class="modal-subtitle">
+              Have a project or internship inquiry? Fill out the details below.
+            </p>
+          </div>
+
+          <!-- Top-Right Close Button -->
+          <button id="closeModalBtn" class="modal-close-btn" type="button" aria-label="Close modal">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </header>
+
+        <!-- Modal Body: Form View -->
+        <div class="modal-body">
+          <div id="formStateContainer">
+            <form id="modalForm" novalidate>
+              <!-- Full Name Field -->
+              <div class="form-group">
+                <label for="fullName" class="form-label">
+                  Full Name <span class="required" aria-hidden="true">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  class="form-control"
+                  placeholder="e.g. Jane Doe"
+                  autocomplete="name"
+                  required
+                />
+                <div class="error-message" role="alert" aria-live="polite"></div>
+              </div>
+
+              <!-- Email Field -->
+              <div class="form-group">
+                <label for="email" class="form-label">
+                  Email Address <span class="required" aria-hidden="true">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control"
+                  placeholder="name@domain.com"
+                  autocomplete="email"
+                  required
+                />
+                <div class="error-message" role="alert" aria-live="polite"></div>
+              </div>
+
+              <!-- Inquiry Type Field -->
+              <div class="form-group">
+                <label for="inquiryType" class="form-label">
+                  Inquiry Topic <span class="required" aria-hidden="true">*</span>
+                </label>
+                <select id="inquiryType" name="inquiryType" class="form-control" required>
+                  <option value="" disabled selected>Select a topic...</option>
+                  <option value="project-review">Internship Project Review</option>
+                  <option value="collaboration">Frontend Collaboration</option>
+                  <option value="technical-question">Technical Architecture</option>
+                  <option value="other">General Feedback</option>
+                </select>
+                <div class="error-message" role="alert" aria-live="polite"></div>
+              </div>
+
+              <!-- Message Field -->
+              <div class="form-group">
+                <label for="message" class="form-label">
+                  Message <span class="required" aria-hidden="true">*</span>
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-control"
+                  rows="3"
+                  placeholder="Tell us about your questions, feedback or thoughts..."
+                  required
+                ></textarea>
+                <div class="error-message" role="alert" aria-live="polite"></div>
+              </div>
+
+              <!-- Modal Footer Controls -->
+              <div class="modal-footer" style="padding: 1.25rem 0 0; background: transparent; border-top: 1px solid var(--color-border); margin-top: 1rem;">
+                <button id="cancelModalBtn" type="button" class="btn btn-outline">
+                  Cancel
+                </button>
+                <button id="submitFormBtn" type="submit" class="btn btn-primary">
+                  <span>Send Message</span>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Modal Body: Success State View -->
+          <div id="successStateContainer" class="modal-success-state" role="region" aria-live="polite">
+            <div class="success-icon-wrapper" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h3 class="success-title">Message Sent Successfully!</h3>
+            <p class="success-text">
+              Thank you for testing the modal submission. Your message has been verified and processed client-side.
+            </p>
+
+            <div class="success-summary-box">
+              <div class="summary-row">
+                <span class="summary-label">Sender:</span>
+                <span id="summaryName" class="summary-val">—</span>
+              </div>
+              <div class="summary-row">
+                <span class="summary-label">Email:</span>
+                <span id="summaryEmail" class="summary-val">—</span>
+              </div>
+              <div class="summary-row">
+                <span class="summary-label">Topic:</span>
+                <span id="summaryType" class="summary-val">—</span>
+              </div>
+            </div>
+
+            <div class="success-actions">
+              <button id="sendAnotherBtn" type="button" class="btn btn-secondary">
+                Send Another
+              </button>
+              <button id="successCloseBtn" type="button" class="btn btn-primary">
+                Done & Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         SECONDARY MODAL: Quick Confirmation Dialog Preset
+         ========================================================================= -->
+    <div id="quickModalOverlay" class="modal-overlay" aria-hidden="true">
+      <div
+        class="modal-dialog modal-confirm-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="quickModalTitle"
+        aria-describedby="quickModalSubtitle"
+      >
+        <header class="modal-header">
+          <div class="modal-header-content">
+            <h2 id="quickModalTitle" class="modal-title">Confirm Action</h2>
+            <p id="quickModalSubtitle" class="modal-subtitle">
+              Verify how secondary alert and confirmation popups operate.
+            </p>
+          </div>
+          <button id="quickModalCloseBtn" class="modal-close-btn" type="button" aria-label="Close confirmation dialog">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </header>
+
+        <div class="modal-body" style="text-align: center; padding: 2rem 1.75rem;">
+          <div class="confirm-icon-wrapper" style="margin: 0 auto 1.25rem;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+          </div>
+          <p style="color: var(--color-text-muted); font-size: 0.9375rem; margin-bottom: 0.5rem;">
+            This demonstrates reusability of the modal overlay engine for confirmation dialogs, system alerts, or destructive action prompts.
+          </p>
+        </div>
+
+        <footer class="modal-footer">
+          <button id="quickModalCancelBtn" type="button" class="btn btn-outline">
+            Cancel
+          </button>
+          <button id="quickModalConfirmBtn" type="button" class="btn btn-primary">
+            Confirm & Proceed
+          </button>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <span>© 2026 Internship Portfolio · Project 3 (Modal / Popup Window)</span>
+        <div class="footer-links">
+          <a href="#modalOverlay" class="footer-link" onclick="document.getElementById('openModalBtn').click(); return false;">Open Modal</a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
